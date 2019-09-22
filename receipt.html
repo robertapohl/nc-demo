@@ -1,0 +1,11 @@
+to: {{transaction.metadata['email']}}
+
+{% if transaction.status == "approved" %}
+<h1>Your receipt from FunnyShop</h1>
+{% else %}
+<h1>Failed payment from FunnyShop</h1>
+{% endif %}
+<p>
+  Amount: {{ transaction.amount }} {{ transaction.currency }}
+</p>
+<p>Regards, your web shop</p>
